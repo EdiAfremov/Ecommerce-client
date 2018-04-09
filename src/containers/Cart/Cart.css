@@ -1,0 +1,101 @@
+.container-cart {
+    box-sizing: border-box;
+    max-width: 960px;
+    min-width: 300px;
+    height: auto;
+    padding: 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.my-bag {
+    width: 59%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    overflow: auto;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 40px 40px;
+    width: 38%;
+    height: 50%;
+}
+
+.total p {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.total h2,
+.my-bag h2 {
+    border-bottom: 1px solid #eee;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+}
+
+.check-out-button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.payment-cards {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.payment-cards img {
+    max-width: 100%;
+    max-height: 20px;
+    margin-top: 5px;
+}
+
+.chcek-out-product {
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.chcek-out-product img {
+    max-width: 140px;
+    max-height: 140px;
+}
+
+.item-descriptions {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.item-descriptions p {
+    margin: 5px;
+    text-transform: capitalize;
+    letter-spacing: 1.7px;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    .container-cart {}
+}
+
+@media (max-width: 767px) {
+    .container-cart {
+        padding: 10px 10px;
+    }
+    .total {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .my-bag {
+        width: 100%;
+    }
+}

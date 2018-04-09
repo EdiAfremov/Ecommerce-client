@@ -1,0 +1,62 @@
+.welcome-header {
+    display: flex;
+    flex: 1 1 100%;
+    height: 140px;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../../assets/saleBanner.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+}
+
+.welcome-header h1 {
+    background: #fe0137;
+    letter-spacing: 3px;
+    color: #fff;
+    font-size: 31px;
+    line-height: 45px;
+    padding: 10px;
+    max-height: 45px;
+    font-weight: 700;
+}
+
+.welcome-main {
+    box-sizing: border-box;
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 800px;
+}
+
+.new-trend,
+.new-suits {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    height: auto;
+    align-items: center;
+}
+
+.new-trend-btn,
+.new-suits-btn {
+    margin: 20px 0;
+    width: 50%;
+}
+
+@media (max-width: 767px) {
+    .welcome-header {
+        height: auto;
+    }
+    .welcome-header h1 {
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: 700;
+    }
+    .welcome-main {
+        padding: 25px;
+        justify-content: center;
+    }
+}

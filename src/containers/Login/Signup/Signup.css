@@ -1,0 +1,60 @@
+.signup-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form-container {
+    height: 480px;
+    width: 400px;
+    margin-top: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form-header {
+    margin: 0;
+}
+
+.signupStepTwoBtn {
+    margin-top: 25px !important;
+    width: 266px !important;
+}
+
+.buttons-section {
+    width: 266px !important;
+    display: flex;
+    justify-content: space-between;
+}
+
+.signupNextBtn {
+    margin-top: auto !important;
+    width: 40px !important;
+    display: flex;
+    align-self: flex-end;
+}
+
+.signupBackBtn {
+    margin-top: auto !important;
+    width: 40px !important;
+    display: flex;
+    align-self: flex-start;
+}
+
+.signupBtnFinal {
+    margin-top: 15px !important;
+    width: 266px !important;
+}
