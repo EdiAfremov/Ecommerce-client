@@ -31,6 +31,7 @@ class clothing extends Component {
     }
   }
   componentDidMount() {
+
     if (this.props.location.state) {
       if (this.props.location.state.welcomePage) {
         this.getClothesByType(this.props.location.state.type)
@@ -209,6 +210,7 @@ class clothing extends Component {
     const products = Object.keys(productsList).map((product, id) => {
       return (
         <div key={ id } className="product" >
+
           <Link
             className="link"
             key={ id }
@@ -219,10 +221,11 @@ class clothing extends Component {
               state: { productID: productsList[product]._id, type: 'clothing' }
             } }
           >
-            <img
+            { this.state.loading ? <CircularProgress color={ '#607d8b' } className="spinner" size={ 80 } thickness={ 5 } /> : <img
               src={ productsList[product].image }
               alt={ productsList[product].brand }
-            />
+            /> }
+
             <p className="brand">{ productsList[product].brand }</p>
             <p className="price">{ productsList[product].price }$</p>
           </Link>

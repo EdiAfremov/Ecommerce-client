@@ -27,6 +27,21 @@
     text-align: center;
 }
 
+@media (max-width: 767px) {
+    .account-container {
+        padding: 20px 20px;
+        display: flex;
+    }
+    .my-account {
+        width: 100%;
+    }
+    .images img {
+        width: 100px;
+        height: 120px;
+        margin-left: 5px;
+    }
+}
+
 .order {
     box-sizing: border-box;
     padding: 10px;
@@ -46,11 +61,12 @@
 .images {
     overflow: auto;
     position: relative;
+    display: flex;
 }
 
 .images img {
-    max-width: 100px;
-    height: auto;
+    width: 100px;
+    max-height: 130px;
     margin-left: 5px;
 }
 

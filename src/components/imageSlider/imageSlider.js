@@ -35,9 +35,17 @@ class SliderCarusel extends Component {
     state = {
         productsFirst: [],
         productsSecond: [],
-        loading: true
+        loading: true,
+        mediaQuery: false,
     }
     componentWillMount() {
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+
+        if (mediaQuery.matches) {
+            this.setState({
+                mediaQuery: mediaQuery.matches,
+            });
+        }
         axios({
             method: 'get',
             url: 'https://enigmatic-refuge-63110.herokuapp.com/carousel'
@@ -92,7 +100,7 @@ class SliderCarusel extends Component {
                             state: { productID: product._id, type: 'sale', productType: product.type }
                         } }
                     >
-                        <div >
+                        <div>
                             <img src={ product.image } />
                             <p>{ product.brand }</p>
                         </div>
@@ -103,21 +111,18 @@ class SliderCarusel extends Component {
         }
         return (
             <div>
-                { this.state.loading ?
-                    <CircularProgress color={ '#607d8b' } className="spinner" size={ 80 } thickness={ 5 } />
-                    :
-                    <div className="carusel-container">
-                        <div className="carusel">
-                            <Slider { ...settings }>
-                                <div style={ { display: 'flex' } }>
-                                    { productsFirst }
-                                </div>
-                                <div style={ { display: 'flex' } } >
-                                    { productsSecond }
-                                </div>
-                            </Slider>
-                        </div>
-                    </div> }
+                <div className="carusel-container">
+                    <div className="carusel">
+                        <Slider { ...settings }>
+                            <div style={ { display: 'flex' } }>
+                                { productsFirst }
+                            </div>
+                            <div style={ { display: 'flex' } } >
+                                { productsSecond }
+                            </div>
+                        </Slider>
+                    </div>
+                </div>
             </div>
         );
     }

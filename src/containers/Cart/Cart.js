@@ -61,7 +61,7 @@ class cart extends Component {
       date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
     axios({
       method: 'post',
-      url: 'http://localhost:3001/orders',
+      url: 'https://enigmatic-refuge-63110.herokuapp.com/orders',
       data: {
         order: this.state.products,
         date: date,

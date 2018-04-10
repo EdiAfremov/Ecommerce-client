@@ -21,6 +21,11 @@
     font-weight: 700;
 }
 
+.loading {
+    text-align: center;
+    justify-content: center;
+}
+
 .welcome-main {
     box-sizing: border-box;
     display: flex;

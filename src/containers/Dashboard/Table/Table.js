@@ -13,6 +13,7 @@ import Edit from 'material-ui/svg-icons/image/edit';
 import Done from 'material-ui/svg-icons/action/done';
 import TextField from 'material-ui/TextField';
 import CircularProgress from 'material-ui/CircularProgress';
+import Paper from 'material-ui/Paper';
 
 import './Table.css'
 
@@ -150,23 +151,25 @@ class table extends Component {
         return (
             <div className={ this.props.sideBar ? "table-container-sideBarOpen" : "table-container" }>
                 { this.state.loading ? <CircularProgress color={ '#607d8b' } className="spinner" size={ 80 } thickness={ 5 } /> :
-                    <Table className="table" multiSelectable={ true } onCellClick={ this.deleteAndEditRowHandler } fixedHeader={ true }
-                    >
-                        <TableHeader style={ { background: ' linear-gradient(60deg,#3F7FEB,#448AFF)', border: 'none' } } displaySelectAll={ false }>
-                            <TableRow >
-                                <TableHeaderColumn style={ { color: 'white' } }>ID</TableHeaderColumn>
-                                <TableHeaderColumn style={ { color: 'white' } }>Brand</TableHeaderColumn>
-                                <TableHeaderColumn style={ { color: 'white' } }>Type</TableHeaderColumn>
-                                <TableHeaderColumn style={ { color: 'white' } }>Price</TableHeaderColumn>
-                                <TableHeaderColumn style={ { color: 'white' } }>Discount</TableHeaderColumn>
-                                <TableHeaderColumn style={ { color: 'white', width: '24px' } }></TableHeaderColumn>
-                                <TableHeaderColumn style={ { color: 'white', width: '24px' } }></TableHeaderColumn>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody className="table" >
-                            { rows }
-                        </TableBody>
-                    </Table> }
+                    <Paper zDepth={ 2 } >
+                        <Table className="table" multiSelectable={ true } onCellClick={ this.deleteAndEditRowHandler } fixedHeader={ true }
+                        >
+                            <TableHeader style={ { background: ' linear-gradient(60deg,#3F7FEB,#448AFF)', border: 'none' } } displaySelectAll={ false }>
+                                <TableRow >
+                                    <TableHeaderColumn style={ { color: 'white' } }>ID</TableHeaderColumn>
+                                    <TableHeaderColumn style={ { color: 'white' } }>Brand</TableHeaderColumn>
+                                    <TableHeaderColumn style={ { color: 'white' } }>Type</TableHeaderColumn>
+                                    <TableHeaderColumn style={ { color: 'white' } }>Price</TableHeaderColumn>
+                                    <TableHeaderColumn style={ { color: 'white' } }>Discount</TableHeaderColumn>
+                                    <TableHeaderColumn style={ { color: 'white', width: '24px' } }></TableHeaderColumn>
+                                    <TableHeaderColumn style={ { color: 'white', width: '24px' } }></TableHeaderColumn>
+                                </TableRow>
+                            </TableHeader>
+                            <TableBody className="table" >
+                                { rows }
+                            </TableBody>
+                        </Table>
+                    </Paper> }
             </div >
         );
     }
